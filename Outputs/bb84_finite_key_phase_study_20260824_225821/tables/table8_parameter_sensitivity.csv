@@ -1,7 +1,0 @@
-coefficient,baseline,role,sensitivity_pct,sensitivity_pct_deterministic
-w_d,0.9,"Drift weight, mean QBER, Eq. (2)",2.638696882858385,2.571579824555206
-w_a,0.055,"Attack weight, mean QBER, Eq. (2)",2.077805324089642,2.072066537634334
-kappa,2.6,"Finite-key penalty, Eq. (6)",0.6651396407834379,0.6797945557346887
-w_M,1.35,"Drift term, secrecy margin, Eq. (6)",0.6256860181418694,0.6102826639230388
-r_a,0.18,"Attack term, retention, Eq. (3)",0.23114935184873536,0.01572618435440888
-r_d,1.1,"Drift term, retention, Eq. (3)",0.22250571691128002,0.007160199341560011

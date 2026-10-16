@@ -1,0 +1,126 @@
+Extended analyses: run summary
+============================================================
+Run ID: 20261016_150535   numpy 2.2.5
+
+Random-stream consistency
+                                    source     mean       sd       min       max
+                         main sweep (SEED) 0.065076 0.012625  0.040137  0.087237
+shot-count study, 10000 shots (SEED+10000) 0.065097 0.012664  0.040125  0.087105
+                                difference 0.000021 0.000040 -0.000012 -0.000132
+
+Transition slope
+      attack    drift    n_eff    q_star   sigma_q  peak_slope_continuous  peak_slope_expected_on_grid  peak_slope_observed  observed_over_expected
+min    0.050  0.00500  8950.00  0.098715  0.003049             125.447060                   107.882267               102.40                0.892875
+mean   0.225  0.01625  9416.25  0.101765  0.003116             128.045147                   112.935802               113.85                1.008369
+max    0.400  0.03000  9855.00  0.104284  0.003180             130.824304                   116.477660               132.80                1.163020
+
+Separability
+analysis                          probability boundary (stochastic)  margin boundary (deterministic)
+share_condition_pct                                       96.367107                        96.332816
+share_shots_pct                                            3.592487                         3.666684
+share_interaction_plus_noise_pct                           0.040406                           0.0005
+residual_sd                                                0.000299                         0.000033
+tukey_F                                                    0.300147                         0.979339
+tukey_p                                                    0.585117                         0.324958
+shot_shift_mean                                            0.006409                         0.006467
+shot_shift_sd_across_conditions                            0.000468                         0.000077
+bootstrap_sd_10000_shots                                     0.0002                           0.0002
+
+Structural sensitivity
+                   variant  mean_eta_c  mean_shift_pct  mean_abs_rel_change_pct  contraction_factor  drift_derating_pct_a005  attack_derating_pct_d010  monotone_decreasing_in_a  monotone_decreasing_in_d
+                  baseline    0.065126        0.000000                 0.000000            2.186276                31.409682                 10.037603                      True                      True
+                  w_a -50%    0.071272        9.436767                10.364640            1.731977                31.321345                  5.147987                      True                      True
+                  w_a -25%    0.068118        4.595021                 5.066123            1.932148                31.165659                  7.790523                      True                      True
+                  w_a +25%    0.062011       -4.782724                 5.243481            2.503392                31.785898                 12.646199                      True                      True
+                  w_a +50%    0.058916       -9.535221                10.464915            2.967051                32.136554                 15.517997                      True                      True
+                  w_d -50%    0.072338       11.074538                12.789649            1.671018                18.538226                  9.739135                      True                      True
+                  w_d -25%    0.068743        5.553426                 6.405757            1.891326                25.125306                 10.067052                      True                      True
+                  w_d +25%    0.061406       -5.711816                 6.582436            2.581840                38.539518                 10.342116                      True                      True
+                  w_d +50%    0.057796      -11.255488                12.971269            3.191283                45.698390                 10.329399                      True                      True
+                  w_M -50%    0.066843        2.636117                 3.049899            2.028053                28.579249                  9.562686                      True                      True
+                  w_M -25%    0.066010        1.357906                 1.570052            2.103206                29.970098                  9.999742                      True                      True
+                  w_M +25%    0.064279       -1.300027                 1.487076            2.266745                33.648762                 10.209692                      True                      True
+                  w_M +50%    0.063387       -2.669716                 3.069378            2.362762                34.902396                 10.280596                      True                      True
+                kappa -50%    0.067225        3.223051                 3.369513            2.124189                31.050570                 10.024973                      True                      True
+                kappa -25%    0.066185        1.626103                 1.699357            2.157951                31.245697                  9.562686                      True                      True
+                kappa +25%    0.064070       -1.622074                 1.678992            2.211583                32.148974                 10.280596                      True                      True
+                kappa +50%    0.062973       -3.305589                 3.436366            2.265595                32.809331                  9.968342                      True                      True
+                  r_a -50%    0.065158        0.049449                 0.204333            2.182380                31.595313                  9.786083                      True                      True
+                  r_a -25%    0.065151        0.037839                 0.158490            2.189579                31.698175                  9.779644                      True                      True
+                  r_a +25%    0.065117       -0.013487                 0.188708            2.176937                31.692408                  9.930286                      True                      True
+                  r_a +50%    0.065037       -0.136022                 0.271847            2.186367                31.835595                 10.105711                      True                      True
+                  r_d -50%    0.065136        0.014855                 0.127387            2.188117                31.251362                 10.334476                      True                      True
+                  r_d -25%    0.065128        0.003945                 0.123025            2.190756                31.414369                 10.135514                      True                      True
+                  r_d +25%    0.065097       -0.045117                 0.139013            2.183889                31.621342                 10.084689                      True                      True
+                  r_d +50%    0.065102       -0.037034                 0.105841            2.192232                31.357575                  9.962591                      True                      True
+attack: linear + quadratic    0.056291      -13.565300                15.342847            4.760743                31.725546                 16.329276                      True                      True
+         attack: quadratic    0.061900       -4.953539                 9.636799            3.939269                30.820154                 10.905840                      True                      True
+        attack: saturating    0.070615        8.428669                 9.485210            1.657743                31.630536                  5.928477                      True                      True
+             no time terms    0.074713       14.720337                15.345200            1.935211                28.603833                  9.109015                      True                      True
+     seasonal amplitude x3    0.065730        0.927687                 0.955288            2.195619                31.059833                 10.113265                      True                      True
+           linear trend x3    0.045106      -30.740585                32.002012            3.386598                41.189751                 14.027948                      True                      True
+
+Margin zero crossing
+       n  q0_asymptotic  q0_baseline_kappa  q0_finite_key_eps1e-06_f1.0  q0_finite_key_eps1e-10_f1.0  q0_finite_key_eps1e-10_f1.16
+    2000       0.110028           0.100612                     0.051454                     0.038384                      0.033440
+    5000       0.110028           0.104021                     0.072521                     0.063320                      0.055591
+   10000       0.110028           0.105762                     0.083373                     0.076564                      0.067504
+   20000       0.110028           0.107002                     0.091120                     0.086158                      0.076202
+  100000       0.110028           0.108669                     0.101538                     0.099233                      0.088152
+ 1000000       0.110028           0.109597                     0.107337                     0.106594                      0.094930
+10000000       0.110028           0.109892                     0.109176                     0.108940                      0.097099
+kappa = 2.6: one-sided 2.75-sigma QBER bound (tail 3.0e-03)
+Margin modules
+                                         module  mean_eta_c  min_eta_c  max_eta_c  contraction_factor  drift_derating_pct_a005  attack_derating_pct_d010  monotone_decreasing_in_a  monotone_decreasing_in_d  n_missing
+                                baseline margin    0.065106   0.039968   0.087244            2.182839                31.630636                 10.231786                      True                      True          0
+             finite-key bound, 100-window block    0.065853   0.040584   0.087863            2.164942                31.365739                 10.164941                      True                      True          0
+finite-key bound, 100-window block, f_EC = 1.16    0.054770   0.029900   0.076536            2.559737                35.079693                 11.820520                      True                      True          0
+
+Attack vector
+component  level  mean_eta_c_true  mean_eta_c_observed  mean_overstatement  mean_eta_c_key_256  mean_eta_c_key_1024  mean_n_eff  monotone_decreasing_in_a  monotone_decreasing_in_d
+      a_L  0.000         0.065093             0.065093            0.000000            0.061061             0.048870     9416.25                      True                      True
+      a_L  0.100         0.064919             0.064919            0.000000            0.060401             0.046766     8416.25                      True                      True
+      a_L  0.200         0.064569             0.064569            0.000000            0.059498             0.044149     7416.25                      True                      True
+      a_L  0.300         0.064168             0.064168            0.000000            0.058243             0.040748     6416.25                      True                      True
+      a_L  0.400         0.063845             0.063845            0.000000            0.056589             0.037140     5416.25                      True                      True
+      a_L  0.500         0.063166             0.063166            0.000000            0.054564             0.032545     4416.25                      True                      True
+      a_H  0.000         0.065093             0.065093            0.000000            0.061061             0.048870     9416.25                      True                      True
+      a_H  0.005         0.064403             0.065093            0.000691            0.060403             0.048213     9416.25                      True                      True
+      a_H  0.010         0.063724             0.065093            0.001369            0.059815             0.047569     9416.25                      True                      True
+      a_H  0.020         0.062342             0.065093            0.002751            0.058528             0.046268     9416.25                      True                      True
+      a_H  0.030         0.060980             0.065093            0.004113            0.057199             0.045088     9416.25                      True                      True
+      a_H  0.050         0.058431             0.065093            0.006662            0.054559             0.042561     9416.25                      True                      True
+
+Hidden leakage
+ attack  drift      eta  offset_from_eta_c  a_H  final_psi_observed  final_psi_true  p_final_secure_observed  p_final_secure_true  alarm_rate_observed  alarm_rate_true
+    0.1   0.01 0.069024             -0.010 0.00            0.607146        0.607146                    1.000                1.000                0.000            0.000
+    0.1   0.01 0.069024             -0.010 0.01            0.590066        0.512084                    1.000                1.000                0.000            0.005
+    0.1   0.01 0.069024             -0.010 0.02            0.585087        0.429286                    1.000                0.990                0.000            0.000
+    0.1   0.01 0.069024             -0.010 0.05            0.593375        0.204835                    1.000                0.815                0.000            0.420
+    0.1   0.01 0.074024             -0.005 0.00            0.314425        0.314425                    0.945                0.945                0.070            0.070
+    0.1   0.01 0.074024             -0.005 0.01            0.328420        0.251086                    0.975                0.935                0.060            0.365
+    0.1   0.01 0.074024             -0.005 0.02            0.333583        0.179032                    0.970                0.845                0.055            0.755
+    0.1   0.01 0.074024             -0.005 0.05            0.305742       -0.079154                    0.935                0.325                0.045            1.000
+
+Key availability
+ key_bits_per_window  aes256_keys_per_window  mean_eta_c_key  min_eta_c_key  max_eta_c_key  mean_contraction_vs_margin_pct  monotone_decreasing_in_a  monotone_decreasing_in_d
+                 256                       1        0.061205       0.035789       0.083590                        6.268670                      True                      True
+                 512                       2        0.056938       0.031603       0.079118                       13.078573                      True                      True
+                1024                       4        0.048850       0.023125       0.071638                       26.074898                      True                      True
+
+         scenario  mean_key_bits_per_window  p05_key_bits  availability_256  availability_512  availability_1024  aes256_keys_per_window
+  low_disturbance               3682.681848   3217.437538          1.000000            1.0000                1.0               14.385476
+transition_margin                103.228321      0.000000          0.163278            0.0185                0.0                0.403236
+elevated_pressure                  0.000000      0.000000          0.000000            0.0000                0.0                0.000000
+ high_disturbance                  0.000000      0.000000          0.000000            0.0000                0.0                0.000000
+
+ key_bits_per_window  lead_time_windows  recovery_windows  buffer_bits_required
+                 256               17.0                 0                4352.0
+                 256               17.0                17                8704.0
+                 256               17.0                50               17152.0
+                 512               17.0                 0                8704.0
+                 512               17.0                17               17408.0
+                 512               17.0                50               34304.0
+                1024               17.0                 0               17408.0
+                1024               17.0                17               34816.0
+                1024               17.0                50               68608.0

@@ -1,0 +1,5 @@
+scenario,mean_key_bits_per_window,p05_key_bits,availability_256,availability_512,availability_1024,aes256_keys_per_window
+low_disturbance,3682.681848404846,3217.4375384950063,1.0,1.0,1.0,14.385475970331429
+transition_margin,103.22832116764988,0.0,0.16327777777777777,0.0185,0.0,0.40323562956113235
+elevated_pressure,0.0,0.0,0.0,0.0,0.0,0.0
+high_disturbance,0.0,0.0,0.0,0.0,0.0,0.0
