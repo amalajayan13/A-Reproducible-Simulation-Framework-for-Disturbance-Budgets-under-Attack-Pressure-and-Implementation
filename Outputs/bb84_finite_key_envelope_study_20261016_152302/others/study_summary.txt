@@ -1,0 +1,9 @@
+BB84 finite-key operating-envelope study: run summary
+============================================================
+Run ID: 20261016_152302
+Output directory: Outputs\bb84_finite_key_envelope_study_20261016_152302
+
+Operating conditions: 2720, replicates per condition: 250
+Mean probability boundary: 0.065076
+Early warning: pooled AUC = 0.9562; within-condition AUC = 0.5172 +/- 0.0535 over 32 conditions; median lead time = 17 windows at 5% false-alarm rate; 26697 trajectories (18705 crossed, 7992 did not).
+Uncertainty budget (half-width): Monte Carlo 0.60%, coefficients 3.37%, operating condition 36.19%.

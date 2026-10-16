@@ -1,0 +1,6 @@
+module,mean_eta_c,derating_ratio,monotone_decreasing_in_a,monotone_decreasing_in_d,n_valid,matched_mean_baseline,matched_mean_variant,n_matched,conditions_without_crossing
+baseline proxy,0.06510579376014344,2.1828388131515637,True,True,32,,,,
+"proxy, kappa = 24",0.03368623247111268,,False,False,31,0.06591669198731102,0.033686232471112666,31.0,"(0.40, 0.030)"
+"finite-key bound, per-window n",0.03581082517938213,,False,False,31,0.06591669198731102,0.03581082517938213,31.0,"(0.40, 0.030)"
+"finite-key bound, 100-window block",0.06585294867406738,2.164941935483871,True,True,32,0.06510579376014344,0.06585294867406738,32.0,-
+"finite-key bound, 100-window block, f_EC = 1.16",0.054770402954205925,2.559737276866664,True,True,32,0.06510579376014344,0.054770402954205925,32.0,-

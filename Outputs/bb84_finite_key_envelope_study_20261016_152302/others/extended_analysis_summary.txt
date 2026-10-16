@@ -1,0 +1,128 @@
+Extended analyses: run summary
+============================================================
+Run ID: 20261016_152302   numpy 2.2.5
+
+Random-stream consistency
+                                    source     mean       sd       min       max
+                         main sweep (SEED) 0.065076 0.012625  0.040137  0.087237
+shot-count study, 10000 shots (SEED+10000) 0.065097 0.012664  0.040125  0.087105
+                                difference 0.000021 0.000040 -0.000012 -0.000132
+Monte Carlo noise floor (one-at-a-time estimator): 0.4306%
+
+Transition slope
+      attack    drift    n_eff    q_star   sigma_q  peak_slope_continuous  peak_slope_expected_on_grid  peak_slope_observed  observed_over_expected
+min    0.050  0.00500  8950.00  0.098715  0.003049             125.447060                   107.882267               102.40                0.892875
+mean   0.225  0.01625  9416.25  0.101765  0.003116             128.045147                   112.935802               113.85                1.008369
+max    0.400  0.03000  9855.00  0.104284  0.003180             130.824304                   116.477660               132.80                1.163020
+
+Separability (replicated two-way ANOVA)
+             source       ss  df           ms  share_pct            F      p
+operating condition 0.099307  31 3.203441e-03  96.376662 36366.422732 0.0000
+         shot count 0.003674   3 1.224720e-03   3.565757 13903.394398 0.0000
+        interaction 0.000014  93 1.530214e-07   0.013811     1.737144 0.0001
+           residual 0.000045 512 8.808787e-08   0.043770          NaN    NaN
+largest interaction cell effect: 4.8500e-04
+ shots  main_effect
+  2000    -0.003718
+  5000    -0.000334
+ 10000     0.001387
+ 20000     0.002666
+
+Structural sensitivity
+             variant          family  mean_eta_c  derating_ratio  monotone_decreasing_in_a  monotone_decreasing_in_d  n_valid  shift_of_mean_pct  max_abs_rel_change_pct
+            baseline               -    0.065126        2.186276                      True                      True       32           0.000000                0.000000
+            w_a -50%     coefficient    0.071272        1.731977                      True                      True       32           9.436767               28.648553
+            w_a -20%     coefficient    0.067517        1.969735                      True                      True       32           3.671764               11.676903
+            w_a +20%     coefficient    0.062645        2.445846                      True                      True       32          -3.808660               11.096750
+            w_a +50%     coefficient    0.058916        2.967051                      True                      True       32          -9.535221               27.500270
+            w_d -50%     coefficient    0.072338        1.671018                      True                      True       32          11.074538               34.701414
+            w_d -20%     coefficient    0.068036        1.939728                      True                      True       32           4.468027               14.147960
+            w_d +20%     coefficient    0.062135        2.493356                      True                      True       32          -4.592324               13.921804
+            w_d +50%     coefficient    0.057796        3.191283                      True                      True       32         -11.255488               33.290860
+            w_M -50%     coefficient    0.066843        2.028053                      True                      True       32           2.636117                8.514455
+            w_M -20%     coefficient    0.065824        2.121970                      True                      True       32           1.071184                3.287712
+            w_M +20%     coefficient    0.064459        2.243598                      True                      True       32          -1.023947                2.748917
+            w_M +50%     coefficient    0.063387        2.362762                      True                      True       32          -2.669716                7.927129
+          kappa -50%     coefficient    0.067225        2.124189                      True                      True       32           3.223051                5.579428
+          kappa -20%     coefficient    0.065984        2.167652                      True                      True       32           1.318163                2.198891
+          kappa +20%     coefficient    0.064279        2.207846                      True                      True       32          -1.299872                2.294197
+          kappa +50%     coefficient    0.062973        2.265595                      True                      True       32          -3.305589                5.716117
+            r_a -50%     coefficient    0.065158        2.182380                      True                      True       32           0.049449                0.684511
+            r_a -20%     coefficient    0.065111        2.185273                      True                      True       32          -0.022226                0.358974
+            r_a +20%     coefficient    0.065098        2.190751                      True                      True       32          -0.042183                0.537534
+            r_a +50%     coefficient    0.065037        2.186367                      True                      True       32          -0.136022                1.180812
+            r_d -50%     coefficient    0.065136        2.188117                      True                      True       32           0.014855                0.497159
+            r_d -20%     coefficient    0.065135        2.194546                      True                      True       32           0.013822                0.491994
+            r_d +20%     coefficient    0.065109        2.188470                      True                      True       32          -0.025718                0.480730
+            r_d +50%     coefficient    0.065102        2.192232                      True                      True       32          -0.037034                0.566143
+    quadratic attack functional form    0.059935        4.981934                      True                      True       32          -7.971021               54.943627
+       no time terms functional form    0.074713        1.935211                      True                      True       32          14.720337               25.553914
+(w_a, w_d, w_M) -50%           joint    0.080305        1.347036                      True                      True       32          23.307164               70.707943
+(w_a, w_d, w_M) +50%           joint    0.049869        6.797725                      True                      True       32         -23.427386               69.317762
+
+Margin zero crossing
+       n  q0_asymptotic  q0_proxy  q0_finite_key_eps1e-06_f1.0  q0_finite_key_eps1e-10_f1.0  q0_finite_key_eps1e-10_f1.16
+    2000       0.110028  0.100612                     0.051454                     0.038384                      0.033440
+    5000       0.110028  0.104021                     0.072521                     0.063320                      0.055591
+   10000       0.110028  0.105762                     0.083373                     0.076564                      0.067504
+   20000       0.110028  0.107002                     0.091120                     0.086158                      0.076202
+  100000       0.110028  0.108669                     0.101538                     0.099233                      0.088152
+ 1000000       0.110028  0.109597                     0.107337                     0.106594                      0.094930
+10000000       0.110028  0.109892                     0.109176                     0.108940                      0.097099
+first-order coefficient at Q=0.08, eps=1e-10: 23.9114
+kappa = 2.6: one-sided 2.7451-sigma QBER bound at q = 0.1058
+Margin modules
+                                         module  mean_eta_c  derating_ratio  monotone_decreasing_in_a  monotone_decreasing_in_d  n_valid  matched_mean_baseline  matched_mean_variant  n_matched conditions_without_crossing
+                                 baseline proxy    0.065106        2.182839                      True                      True       32                    NaN                   NaN        NaN                         NaN
+                              proxy, kappa = 24    0.033686             NaN                     False                     False       31               0.065917              0.033686       31.0               (0.40, 0.030)
+                 finite-key bound, per-window n    0.035811             NaN                     False                     False       31               0.065917              0.035811       31.0               (0.40, 0.030)
+             finite-key bound, 100-window block    0.065853        2.164942                      True                      True       32               0.065106              0.065853       32.0                           -
+finite-key bound, 100-window block, f_EC = 1.16    0.054770        2.559737                      True                      True       32               0.065106              0.054770       32.0                           -
+
+Key availability
+ key_bits_per_window  n_valid_A0.5  mean_eta_A0.5  ci_low_A0.5  ci_high_A0.5  n_valid_A0.99  mean_eta_A0.99  ci_low_A0.99  ci_high_A0.99  change_vs_security_pct_A0.5  change_vs_security_pct_A0.99
+                   0            32       0.065105     0.065023      0.065178             32        0.057554      0.057197       0.057766                     0.000000                    -11.597776
+                 256            32       0.061184     0.061120      0.061254             32        0.053686      0.053503       0.054012                    -6.022692                    -17.539553
+                1024            32       0.048807     0.048741      0.048877             32        0.041779      0.041662       0.042023                   -25.033913                    -35.827590
+                2048            32       0.033584     0.033526      0.033635             32        0.027288      0.027103       0.027490                   -48.415653                    -58.086460
+(a, d) = (0.10, 0.010): n_eff = 9710.0, mean yield at eta = 0: 6119.6
+attack                0.100000
+drift                 0.010000
+n_eff              9710.000000
+eta_A_0_0.5           0.078611
+eta_A_0_0.99          0.072083
+eta_A_256_0.5         0.075081
+eta_A_256_0.99        0.067875
+eta_A_1024_0.5        0.062986
+eta_A_1024_0.99       0.055938
+eta_A_2048_0.5        0.048007
+eta_A_2048_0.99       0.042545
+
+Attack vector
+component  level  n_eff  eta_c_p50  eta_c_p50_observable  eta_A_1024  mean_key_bits_at_eta_probe  mean_qber_at_eta_probe
+      a_Q   0.00   9890   0.084342              0.084342    0.068835                 1614.929756                0.078686
+      a_Q   0.10   9890   0.079000              0.079000    0.063556                 1239.672385                0.084186
+      a_Q   0.20   9890   0.073556              0.073556    0.058131                  866.378990                0.089686
+      a_Q   0.30   9890   0.068084              0.068084    0.052670                  515.519161                0.095186
+      a_Q   0.40   9890   0.061833              0.061833    0.046971                  187.750110                0.100686
+      a_L   0.00   9890   0.084342              0.084342    0.068835                 1614.929756                0.078686
+      a_L   0.10   8990   0.084322              0.084322    0.067183                 1475.249333                0.078686
+      a_L   0.20   8090   0.084153              0.084153    0.065176                 1314.024144                0.078686
+      a_L   0.30   7190   0.083889              0.083889    0.062396                 1156.398997                0.078686
+      a_L   0.40   6290   0.083491              0.083491    0.059337                  995.372616                0.078686
+  delta_H   0.00   9890   0.084342              0.084342    0.068835                 1614.929756                0.078686
+  delta_H   0.01   9890   0.082727              0.084342    0.067407                 1516.029756                0.078686
+  delta_H   0.02   9890   0.081386              0.084342    0.066063                 1417.129756                0.078686
+  delta_H   0.05   9890   0.076577              0.084342    0.061538                 1120.429756                0.078686
+  delta_H   0.10   9890   0.068966              0.084342    0.054964                  625.929756                0.078686
+
+Hidden-leakage blind spot
+     eta  offset_from_eta_c  delta_H  p_final_secure_observed  p_final_secure_true  alarm_rate_observed  alarm_rate_true
+0.069024             -0.010     0.00                    1.000                1.000                0.000            0.000
+0.069024             -0.010     0.01                    1.000                0.995                0.000            0.005
+0.069024             -0.010     0.02                    1.000                0.980                0.000            0.000
+0.069024             -0.010     0.05                    1.000                0.720                0.000            0.775
+0.074024             -0.005     0.00                    0.945                0.945                0.070            0.070
+0.074024             -0.005     0.01                    0.975                0.900                0.060            0.465
+0.074024             -0.005     0.02                    0.970                0.800                0.055            0.835
+0.074024             -0.005     0.05                    0.935                0.160                0.045            1.000
