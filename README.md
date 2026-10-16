@@ -1,21 +1,6 @@
 # Secure operating envelope of a BB84-inspired finite-key link
 
-Simulation code for estimating the secure-to-insecure operating boundary of a
-BB84-inspired finite-key quantum key distribution link under channel
-disturbance, attack pressure and implementation drift.
-
-The notebook `mainv4.ipynb` runs the complete study:
-
-- endpoint Monte Carlo sweep over 85 × 8 × 4 operating conditions (250 replicates each)
-- margin-based and probability-based boundary estimation with bootstrap intervals
-- shot-count and classification-margin robustness
-- repeated trajectory analysis for four representative scenarios
-- early-warning validation (pooled and within-condition ROC, lead time)
-- coefficient sensitivity and a three-way uncertainty budget
-- structural sensitivity (±25% and ±50% coefficients, alternative functional forms)
-- comparison of the margin with asymptotic and finite-key bounds
-- attack-vector model with loss-only and hidden-leakage components
-- key-yield and key-availability analysis
+The notebook `mainv5.ipynb` runs the complete study:
 
 ## Requirements
 
